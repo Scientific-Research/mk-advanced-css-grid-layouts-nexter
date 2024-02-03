@@ -33,3 +33,10 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
+
+.container {
+  display: grid;
+  // vw:viewport width  vh:viewport height
+  // grid-template-rows: 1000px min-content 800px min-content min-content min-content;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+}
