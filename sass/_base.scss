@@ -39,4 +39,13 @@ body {
   // vw:viewport width  vh:viewport height
   // grid-template-rows: 1000px min-content 800px min-content min-content min-content;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  // grid-template-columns: repeat(8, 1fr); // this produces 8 equally columns
+  // we use width for entire 8 columns: something between 1100px to 1200px
+  // for example, we use 1140px/8 = 142.5px bzw. 140px or 14rem is width for every column
+  // grid-template-columns: repeat(8, 14rem); // but when we decrease and increase the width
+  // of the page, the width of every column doesn't change, to make it changeable, we use
+  // minmax() function
+  grid-template-columns: repeat(8, minmax(min-content, 14rem));
+  // min would be min-content and max would be 14rem. So, we want to have 8 columns and every column
+  // has to have width between min-content as minimum width and 140px as maximum width!
 }
