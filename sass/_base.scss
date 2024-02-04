@@ -46,14 +46,23 @@ body {
   // of the page, the width of every column doesn't change, to make it changeable, we use
   // minmax() function
   grid-template-columns:
-    [sidebar-start] 8rem [sidebar-end full-start] 1fr [center-start] repeat(
+    [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(
       8,
       [col-start] minmax(min-content, 14rem) [col-end]
     )
     [center-end]
-    1fr [full-end];
+    minmax(6rem, 1fr) [full-end];
   // min would be min-content and max would be 14rem. So, we want to have 8 columns and every column
   // has to have width between min-content as minimum width and 140px as maximum width!
+  // we made it also in this way that, when we decrease the size of page, this 1fr after sidebar
+  // and after realtors (before center-start and before full-end) will have minimum 60px(6rem),
+  // and maximum 1fr, that's means: it will have min 60px in responsive mode and not less than
+  // this value, when we decrease the page size in responsive mode => minmax(6rem, 1fr)
+  // in this situation, the smallest value for size would be 60px and after that when we continue
+  // to shrink more, the columns will start to shrink from 140rem to min-content which is
+  // smalles value for every column and other two extra columns will never will be smaller than
+  // 60px. and this min 60px will ensure us that there will be always some margin between
+  // our content and the end of the page!
 
   // the container and all the direct children => THIS IS ONLY FOR TEST PURPOSES
   & > * {
