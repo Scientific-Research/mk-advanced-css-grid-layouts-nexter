@@ -54,4 +54,10 @@ body {
     1fr [full-end];
   // min would be min-content and max would be 14rem. So, we want to have 8 columns and every column
   // has to have width between min-content as minimum width and 140px as maximum width!
+
+  // the container and all the direct children => THIS IS ONLY FOR TEST PURPOSES
+  & > * {
+    padding: 40px;
+    font-size: 3rem;
+  }
 }
