@@ -1,10 +1,15 @@
 .features {
-  background-color: $color-grey-light-2;
+  // background-color: $color-grey-light-2;
   grid-column: center-start / center-end;
+
+  // some definitions for our feature items:
+  margin: 15rem 0;
 
   // we want to have these grid items in a grid container!
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem;
+
   // grid-template-rows: auto auto; we don't need this, the compiler do it automatically!
   // it will create for us as implicit rows and not explicit - it is just enough to define
   // the columns, then it will create us the rows automatically!

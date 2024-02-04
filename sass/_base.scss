@@ -65,8 +65,8 @@ body {
   // our content and the end of the page!
 
   // the container and all the direct children => THIS IS ONLY FOR TEST PURPOSES
-  & > * {
-    padding: 40px;
-    font-size: 3rem;
-  }
+  // & > * {
+  //   padding: 40px;
+  //   font-size: 3rem;
+  // }
 }
