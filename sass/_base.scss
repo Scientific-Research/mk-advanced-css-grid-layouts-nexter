@@ -45,7 +45,7 @@ body {
   // grid-template-columns: repeat(8, 14rem); // but when we decrease and increase the width
   // of the page, the width of every column doesn't change, to make it changeable, we use
   // minmax() function
-  grid-template-columns: 8rem repeat(8, minmax(min-content, 14rem));
+  grid-template-columns: 8rem 1fr repeat(8, minmax(min-content, 14rem)) 1fr;
   // min would be min-content and max would be 14rem. So, we want to have 8 columns and every column
   // has to have width between min-content as minimum width and 140px as maximum width!
 }
