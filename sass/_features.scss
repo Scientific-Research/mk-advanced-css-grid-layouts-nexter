@@ -22,6 +22,8 @@
   // and the text at the bottomn of headline in second row, it means: 2 rows x 2 columns
   display: grid;
   grid-template-columns: min-content 1fr;
+  grid-row-gap: 1.5rem;
+  grid-column-gap: 2.5rem;
 
   &__icon {
     fill: $color-primary;
