@@ -4,6 +4,7 @@
     // grid-column: full-start / center-start;
     // grid-column: col-start 1 / col-start 5;
     grid-column: full-start / col-end 4;
+    background-image: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)), url(../img/back.jpg);
 
     // to make our grid as 6*6 grid cells and place our two images in this grid:
     display: grid;
