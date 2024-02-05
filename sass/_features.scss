@@ -16,10 +16,20 @@
 }
 
 .feature {
+  // feature is a grid item itself and would be a grid container.
+  // we can nest the grid like flexbox deeply:
+  // here we want to put the icon at the left hand in line of headline as first row
+  // and the text at the bottomn of headline in second row, it means: 2 rows x 2 columns
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
   &__icon {
     fill: $color-primary;
     width: 4.5rem;
     height: 4.5rem;
+    // grid-row: 1 / span 2;
+    // OR
+    // grid-row: 1 / -1;
   }
 
   &__text {
