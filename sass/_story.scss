@@ -19,6 +19,7 @@
     // we use vw(view point of width) instead of rem =>in this case, when we chnage the width of the
     // page to test the page responsiveness, we see that, the width (padding) of the content
     // section changes and it is not fixed anymore!
+    // summary: using vw instead of rem to make the padding changes flexible and not fixed anymore!
 
     /*
       // NOW, WE USE FLEX-BOX WITH GRID:
