@@ -22,6 +22,7 @@
   // and the text at the bottomn of headline in second row, it means: 2 rows x 2 columns
   display: grid;
   grid-template-columns: min-content 1fr;
+  // here to make a little bit gap between icon and texts in both direction of row and column!
   grid-row-gap: 1.5rem;
   grid-column-gap: 2.5rem;
 
@@ -34,6 +35,8 @@
     // OR
     // grid-row: 1 / -1; this doesn't work here, because we don't have explicit rows and
     // we have here only implicit rows!
+    transform: translateY(-1rem); // this will move the icon a little bit to the top in Y direction
+    // and we see now that the middle of icon is in line of middle of our headline!
   }
 
   &__text {
