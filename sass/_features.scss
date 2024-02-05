@@ -5,9 +5,24 @@
   // some definitions for our feature items:
   margin: 15rem 0;
 
-  // we want to have these grid items in a grid container!
+  // We have TWO grids here:
+  // we have a big grid which contains all the six grid items and one grid item for one feature
+  // and each feature is a grid container itself which contains these three grid items:
+  // icon, headline and text.
+  // Grid allows us to nest as many grids inside of each other and it is very helpful!
+  // We can use Grid for big two dimensional layouts and also for small one like our design here!
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  // grid-template-columns: repeat(3, 1fr);
+  // when we want to make our page responsive, instead of using fixed parameters like repeat(3, 1fr),
+  // we have to use auto-fit and minmax() function.
+  // auto-fit will create as many tracks as can fit in our container base on the width which we defined already!
+  // for example here, we use minmax() function to define our width between min. 25rem => 250px
+  // and max. 1fr
+  // Based on this, auto-fit tries to fit as manay tracks as can in our container, when we are
+  // trying to decrease or increase the dimensions of the page in responsive mode!
+  // when the column becomes less than 250px, it will change the column number from three to
+  // two columns.
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 6rem;
 
   align-items: start; // we have to write this command in parent element(here) and not in child elements!
