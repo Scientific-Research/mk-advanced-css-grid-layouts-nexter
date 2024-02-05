@@ -10,6 +10,13 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;
 
+  // the default for align-items is stretch, that's why we see that the headline
+  // is stretched for two items in right hand(secure and location),
+  // because of they are long headlines, we will have an empty line in bottomn of the headlines
+  // and then these two texts are not aligned with other 6 texts.
+  // with align-items: start; we will start it from beginning and the problem will be removed!
+  align-items: start;
+
   // grid-template-rows: auto auto; we don't need this, the compiler do it automatically!
   // it will create for us as implicit rows and not explicit - it is just enough to define
   // the columns, then it will create us the rows automatically!
