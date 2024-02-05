@@ -16,6 +16,12 @@
     grid-column: col-start 5 / full-end;
 
     padding: 6rem 12rem;
+    display: flex; // put all the grid items side by side!
+    flex-direction: column; // and now, we see all grid items in a column position and
+    // that exacly what we want! and now, we also changed the axis, when we change the flex-direction
+    // and now, we have the Y axis as main axios and X axis as Cross axis!, therefore,
+    // we use justify-content to set the grid items in Center vertically!
+    justify-content: center;
   }
 
   &__text {
