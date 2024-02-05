@@ -5,13 +5,22 @@
     // grid-column: col-start 1 / col-start 5;
     grid-column: full-start / col-end 4;
 
+    // to make our grid as 6*6 grid cells and place our two images in this grid:
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    // we have to use align-items:center to make the image center vertically across the cross axis
   }
 
   &__img--1 {
     width: 100%;
+    grid-row: 2/6;
+    grid-column: 2/6;
+    // but as we see, the image keep its ratio and will not cover the grid 100% from 2 to 6
+    // grid cells in Y direction.
+    // we have to use align-items:center to make the image center vertically across the cross axis,
+    // we have to do it in container => parent element => in &__pictures
   }
 
   &__img--2 {
