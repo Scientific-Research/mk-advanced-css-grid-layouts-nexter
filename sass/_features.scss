@@ -14,3 +14,15 @@
   // it will create for us as implicit rows and not explicit - it is just enough to define
   // the columns, then it will create us the rows automatically!
 }
+
+.feature {
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}
