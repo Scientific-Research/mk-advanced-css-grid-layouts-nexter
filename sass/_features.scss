@@ -10,12 +10,15 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 6rem;
 
+  align-items: start; // we have to write this command in parent element(here) and not in child elements!
   // the default for align-items is stretch, that's why we see that the headline
   // is stretched for two items in right hand(secure and location),
   // because of they are long headlines, we will have an empty line in bottomn of the headlines
   // and then these two texts are not aligned with other 6 texts.
-  // with align-items: start; we will start it from beginning and the problem will be removed!
-  align-items: start;
+  // with align-items: start; it will push icon, headline and text to the beginning of the page!
+  // with align-items: end; it will push icon, headline and text to the end of the page!
+  // IMPORTANT: we don't see any changes for other six items, they don't go to the top and bottomn
+  // when i chnage the command from start to end and vice versa, because they are big enough!
 
   // grid-template-rows: auto auto; we don't need this, the compiler do it automatically!
   // it will create for us as implicit rows and not explicit - it is just enough to define
