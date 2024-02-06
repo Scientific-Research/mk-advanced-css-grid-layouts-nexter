@@ -1,4 +1,18 @@
 .homes {
-  background-color: $color-secondary;
+  // background-color: $color-secondary;
   grid-column: center-start / center-end;
+  margin: 15rem 0;
+
+  // homes is parent elemnt or grid container for our six grid cards!
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  // it will try to fit the grid cards as it can with min. 25rem=>250px and max. 1fr,
+  // it means the width of every grid card is variable between 25rem and max. 1fr
+  // it ensures us that our six grid cards are responsive without writing any media query code!
+
+  grid-gap: 7rem;
+}
+
+.home {
+  background-color: $color-grey-light-1;
 }
