@@ -37,6 +37,9 @@
     width: 2.5rem;
     z-index: 2; // place the like-icon on top of the image! to ensure that it stays always
     // on the top of the image!
+    // margin-right: auto; this doesn't work here in grid
+    justify-self: end; // this works in grid
+    margin: 1rem;
   }
 
   &__name {
