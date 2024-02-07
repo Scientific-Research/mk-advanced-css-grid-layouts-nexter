@@ -23,14 +23,14 @@
 
   &__img {
     width: 100%;
-    grid-column: 1/-1; // to have the image
+    grid-column: 1/-1; // to have the image spanned entire the two columns
   }
 
   &__like {
   }
 
   &__name {
-    grid-column: 1/-1; // to have the image
+    grid-column: 1/-1; // to have the name spanned entire the two columns
   }
 
   &__location,
@@ -42,5 +42,9 @@
       height: 2rem;
       width: 2rem;
     }
+  }
+
+  &__btn {
+    grid-column: 1/-1;
   }
 }
