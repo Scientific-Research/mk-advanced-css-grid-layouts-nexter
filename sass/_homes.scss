@@ -23,12 +23,14 @@
 
   &__img {
     width: 100%;
+    grid-column: 1/-1; // to have the image
   }
 
   &__like {
   }
 
   &__name {
+    grid-column: 1/-1; // to have the image
   }
 
   &__location,
