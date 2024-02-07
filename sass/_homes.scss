@@ -73,6 +73,9 @@
   &__rooms,
   &__area,
   &__price {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+
     svg {
       fill: $color-primary;
       height: 2rem;
