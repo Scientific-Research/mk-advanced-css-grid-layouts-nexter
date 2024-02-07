@@ -16,6 +16,11 @@
 .home {
   background-color: $color-grey-light-1;
 
+  // most of the time, we define the grid for columns and CSS will figure out the
+  // rows automatically!
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
   &__img {
     width: 100%;
   }
