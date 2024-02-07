@@ -20,6 +20,7 @@
   // rows automatically!
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3.5rem; // to put some gap(distance) between rows!
 
   &__img {
     width: 100%;
