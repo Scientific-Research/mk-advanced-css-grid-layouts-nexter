@@ -192,6 +192,7 @@ body {
     z-index: 3;
     grid-column: 1/-1;
     justify-self: center;
+    align-self: end;
     width: 80%;
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.6rem;
@@ -199,7 +200,8 @@ body {
     padding: 1.25rem;
     background-color: #101d2c;
     color: #fff;
-    font-weight: 400; }
+    font-weight: 400;
+    transform: translateY(50%); }
   .home__location svg, .home__rooms svg, .home__area svg, .home__price svg {
     fill: #c69963;
     height: 2rem;

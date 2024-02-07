@@ -47,6 +47,8 @@
     z-index: 3;
     grid-column: 1/-1; // to have the name spanned entire the two columns
     justify-self: center;
+    align-self: end; // it comes at the bottom of the grid area! and now with translateY()
+    // we bring it a little bit down!
 
     width: 80%;
     font-family: $font-display;
@@ -56,6 +58,8 @@
     background-color: $color-secondary;
     color: #fff;
     font-weight: 400;
+    transform: translateY(50%); // 50% correspond to the 50% of the height of the element itself!
+    // and it comes exactly at the center of itself!
   }
 
   &__location,
