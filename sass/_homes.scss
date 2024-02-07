@@ -23,10 +23,20 @@
 
   &__img {
     width: 100%;
+    grid-row: 1/2; // to bring the image back and show it on the bottom of the heart!
     grid-column: 1/-1; // to have the image spanned entire the two columns
+    z-index: 1; // place the image under the like icon! to ensure that it stays always
+    // on the bottom of the like-icon!
   }
 
   &__like {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    fill: $color-primary;
+    height: 2.5rem;
+    width: 2.5rem;
+    z-index: 2; // place the like-icon on top of the image! to ensure that it stays always
+    // on the top of the image!
   }
 
   &__name {
