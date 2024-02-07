@@ -188,6 +188,8 @@ body {
     justify-self: end;
     margin: 1rem; }
   .home__name {
+    grid-row: 1/2;
+    z-index: 3;
     grid-column: 1/-1;
     justify-self: center;
     width: 80%;

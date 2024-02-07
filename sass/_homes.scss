@@ -43,6 +43,8 @@
   }
 
   &__name {
+    grid-row: 1/2;
+    z-index: 3;
     grid-column: 1/-1; // to have the name spanned entire the two columns
     justify-self: center;
 
