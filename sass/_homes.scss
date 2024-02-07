@@ -44,6 +44,9 @@
 
   &__name {
     grid-column: 1/-1; // to have the name spanned entire the two columns
+    justify-self: center;
+
+    width: 80%;
     font-family: $font-display;
     font-size: 1.6rem;
     text-align: center;
