@@ -64,6 +64,12 @@
   }
 
   &__location,
+  &__rooms {
+    margin-top: 2.5rem; // to put some space between top of the location and rooms with
+    // the black box of the name
+  }
+
+  &__location,
   &__rooms,
   &__area,
   &__price {
