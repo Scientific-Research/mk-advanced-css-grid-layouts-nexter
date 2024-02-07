@@ -44,6 +44,13 @@
 
   &__name {
     grid-column: 1/-1; // to have the name spanned entire the two columns
+    font-family: $font-display;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: $color-secondary;
+    color: #fff;
+    font-weight: 400;
   }
 
   &__location,
