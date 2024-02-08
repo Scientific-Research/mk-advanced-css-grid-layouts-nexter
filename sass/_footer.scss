@@ -6,4 +6,25 @@
 
 .nav {
   list-style: none;
+
+  display: grid;
+  // grid-template-columns: repeat(6,1fr); in this case, it would not be responsive, that's why
+  // we have to use auto-fit and minmax() function
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  // as soon as one of these footer items will be narrower than 20rem(min width), this item
+  // will be disappeared when we decrease the size of the page in responsive mode!
+
+  &__link:link,
+  &__link:visited {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: $font-display;
+    text-transform: uppercase;
+    text-align: centers;
+    padding: 1.5rem;
+    display: block;
+
+    background-color: rgba($color: #fff, $alpha: 0.05);
+  }
 }
