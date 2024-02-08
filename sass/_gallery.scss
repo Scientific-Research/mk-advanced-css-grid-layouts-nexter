@@ -1,5 +1,5 @@
 .gallery {
-  background-color: $color-grey-dark-1;
+  background-color: $color-grey-light-1;
   grid-column: full-start / full-end;
 
   display: grid;
@@ -7,6 +7,8 @@
   // grid-template-rows: repeat(auto-fit, minmx(20vw, 1fr));
   grid-template-rows: repeat(7, 5vw); // 5% of view port width is a good choice
   // to define the height of the images!
+  grid-gap: 1.5rem;
+  padding: 1.5rem;
 
   // for all the children have the width of 100%
   & > * {
