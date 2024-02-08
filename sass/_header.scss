@@ -7,8 +7,9 @@
 
   // start with grid container:
   display: grid;
-  grid-template-rows: 1fr; // this is the 80% of view-port height!
+  grid-template-rows: 1fr min-content 6rem; // this is the 80% of view-port height!
   // without this 1fr, all the rows were equally divided and that's what we don't want!
+  grid-row-gap: 1.5rem;
 
   &__logo {
     height: 3rem;
