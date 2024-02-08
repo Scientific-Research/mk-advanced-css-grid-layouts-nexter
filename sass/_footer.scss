@@ -27,7 +27,11 @@
     text-align: center;
     padding: 1.5rem;
     display: block;
+    transition: all, 0.2s;
+  }
 
+  &__link:hover,
+  &__link:active {
     background-color: rgba($color: #fff, $alpha: 0.05);
   }
 }
