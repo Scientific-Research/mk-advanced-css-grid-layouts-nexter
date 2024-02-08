@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: center;
   padding: 8rem;
+  padding-top: 4rem;
 
   // start with grid container:
   display: grid;
@@ -14,6 +15,7 @@
 
   &__logo {
     height: 3rem;
+    justify-self: center; // only nexter logo will be placed in center!
   }
 
   &__btn {
