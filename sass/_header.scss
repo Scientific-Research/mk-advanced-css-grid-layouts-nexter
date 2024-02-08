@@ -11,6 +11,7 @@
   display: grid;
   grid-template-rows: 1fr min-content 6rem 1fr; // this is the 80% of view-port height!
   // without this 1fr, all the rows were equally divided and that's what we don't want!
+  grid-template-columns: max-content;
   grid-row-gap: 1.5rem;
 
   &__logo {
