@@ -15,6 +15,11 @@
     height: 3rem;
   }
 
+  &__btn {
+    align-self: start; // put the button only at the top=> start but spanned all over the row!
+    justify-self: start; // place the button at the start of the row=> on top and at the left side!
+  }
+
   &__seenon-text {
   }
 
