@@ -106,7 +106,9 @@ body {
   grid-column: full-start / col-end 6;
   background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  display: grid;
+  grid-template-rows: 1fr; }
   .header__logo {
     height: 3rem; }
   .header__seenon-logos img {
