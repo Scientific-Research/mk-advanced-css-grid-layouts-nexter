@@ -10,8 +10,19 @@
   grid-gap: 1.5rem;
   padding: 1.5rem;
 
-  // for all the children have the width of 100%
-  & > * {
-    width: 100%;
+  &__item {
   }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // when we use this feature, we have to use height:100% absolutely,
+    // otherwise, this feature will not work!
+    display: block; // we will not see the white part of the image in compare when it is in
+    // default mode: inline-block
+  }
+
+  // for all the children have the width of 100%
+  // & > * {
+  // }
 }
