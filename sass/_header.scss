@@ -13,6 +13,8 @@
   // without this 1fr, all the rows were equally divided and that's what we don't want!
   grid-template-columns: max-content;
   grid-row-gap: 1.5rem;
+  justify-content: center; // to bring all the grid row items now in the middle of the header!
+  // hajic => horizontal justify content
 
   &__logo {
     height: 3rem;
