@@ -38,7 +38,8 @@
     //  is not enough! that's why we have to use max-content
     grid-template-columns: 1fr max-content 1fr;
     // justify-content: center;
-    // align-items: center;
+    align-items: center;
+    grid-column-gap: 1.5rem;
 
     font-size: 1.6rem;
     color: $color-grey-light-2;
