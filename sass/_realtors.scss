@@ -4,6 +4,17 @@
   grid-column: col-start 7 / full-end;
 
   &__list {
+    display: grid;
+
+    // grid-template-rows: repeat(3, 1fr); // we don't need it, it is already there!
+    // we just need to define the grid-template-columns
+    // grid-template-columns: repeat(2, fr); // it is better to define it as flexible items
+    // with min-content and max-content
+
+    grid-template-columns: min-content max-content; // min-content for image with 7rem as width
+    // and max-content for its text beside it, to take the max length of the longest text and #
+    // in this case, the second word doesn't go to the next line!
+    // column-gap: 1rem;
   }
 
   &__img {
