@@ -14,6 +14,10 @@
     // and we have to define it in this way => it works for equal or less than 1000px:
     grid-column: 1/-1; // the entire columns
     grid-row: 1/2; // only betwenn first and second rows!
+
+    // to bring these three small lines at the end of the sidebar and also vertically centered!
+    justify-content: flex-end;
+    align-items: center;
   }
 }
 
@@ -40,5 +44,21 @@
   }
   &::after {
     transform: translateY(1.3rem);
+  }
+
+  // to make it responsive for desktop first layout => max-width:1000px
+  @media only screen and (max-width: $bp-large) {
+    // setting these two margins to have these three small lines aligned correctly in the
+    // right side at the end.
+    margin-top: 0;
+    margin-right: 3rem;
+
+    // to remove the extera spaces between these three small lines and make it more natural!
+    &::before {
+      transform: translateY(-1.2rem);
+    }
+    &::after {
+      transform: translateY(1rem);
+    }
   }
 }
