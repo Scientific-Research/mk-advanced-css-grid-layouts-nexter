@@ -9,9 +9,11 @@
 
   // start with grid container:
   display: grid;
-  grid-template-rows: 1fr min-content 6rem 1fr; // this is the 80% of view-port height!
+  // grid-template-rows: 1fr min-content 6rem 1fr; // this is the 80% of view-port height!
   // without this 1fr, all the rows were equally divided and that's what we don't want!
   // grid-template-columns: max-content;
+  grid-template-rows: 1fr min-content minmax(6rem, min-content) 1fr; // to be responsive, we have
+  // to make it min. 6rem and max would be our in-content
   grid-template-columns: minmax(min-content, max-content); // to be responsive - the min value
   // will never be less than min-content and max value would be max-content, when we change
   // the width of the page!
@@ -56,15 +58,15 @@
       display: block;
     }
 
-    &::before {
-      // transform: translateX(-1rem);
-      // margin-top: 50%;
-    }
+    // &::before {
+    //   // transform: translateX(-1rem);
+    //   // margin-top: 50%;
+    // }
 
-    &::after {
-      // transform: translate(1rem);
-      // transform: translateX(1rem);
-    }
+    // &::after {
+    //   // transform: translate(1rem);
+    //   // transform: translateX(1rem);
+    // }
   }
 
   &__seenon-logos {
@@ -72,6 +74,7 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 3rem;
     justify-items: center;
+    align-items: center; // to be aligned vertically the items in the grid!
 
     img {
       // height: 2.5rem;
