@@ -101,11 +101,21 @@ body {
     // here we don't need the column, i removed it. we need only an extra row!
     // for the realtors to come down from right side when we are in equal or less than 800px!
     // we have to add an extra min-content => we have now two min-content!
-    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+    // grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
     // we want that header to occupy all the page, when realtor section disappears!
     // that's why we use 100vh instead of 80vh!
     // calc(100vh - 6rem) will subtract 6rem from headers which is 100vh and we will have from
     // beginning the real header which is 100vh - 6rem and when we scroll to down, we
     // go directly to features section.
+
+    // we change the 40vw which is for the text above the image of the couple to min-content,
+    // because the width of the grid for this text will be determined with text(content) itself
+    // and not with a fixed number like 40vw
+    // grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
+
+    // grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content repeat(3, min-content);
+    // OR we can ignore all these min-content, the Grid will automatically locate the grid placement according
+    // to its content - we have to only take care of the sidebar and header!
+    grid-template-rows: 6rem calc(100vh - 6rem);
   }
 }
