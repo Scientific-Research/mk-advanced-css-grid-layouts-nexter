@@ -27,6 +27,11 @@
     grid-column: 1/-1; // or full-start / full-end
   }
 
+  // to make it responsive for desktop first layout => max-width:600px
+  @media only screen and (max-width: $bp-small) {
+    padding: 5rem; // it is 8rem already (at the top)!
+  }
+
   &__logo {
     height: 3rem;
     justify-self: center; // only nexter logo will be placed in center!

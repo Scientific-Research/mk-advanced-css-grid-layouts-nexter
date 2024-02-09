@@ -46,6 +46,12 @@
       // both image with min-content and also text with max-content!
       // at the end, we will have six colums track instead of 2 column tracks at the beginning!
     }
+
+    // to make it responsive for desktop first layout => max-width:600px
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content; // the three images of realtors and
+      // the information besides them will change to the vertical mode, when we are in max-width=600px
+    }
   }
 
   &__img {
