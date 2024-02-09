@@ -12,6 +12,11 @@
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
     // we have to use align-items:center to make the image center vertically across the cross axis
+
+    // to make it responsive for desktop first layout => max-width:800px
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1; //  The couple picture takes the entire row, when we are in max-width:800px
+    }
   }
 
   &__img--1 {
@@ -74,6 +79,11 @@
     display: grid;
     align-content: center;
     justify-items: start;
+
+    // to make it responsive for desktop first layout => max-width:800px
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1; //  The text under the couple picture takes the entire row, when we are in max-width:800px
+    }
   }
 
   &__text {
