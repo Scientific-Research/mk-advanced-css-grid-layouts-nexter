@@ -150,11 +150,16 @@ body {
     grid-template-rows: repeat(3, max-content);
     grid-template-columns: min-content max-content;
     grid-column-gap: 2rem;
-    grid-row-gap: 5vh; }
+    grid-row-gap: 5vh;
+    align-items: center; }
   .realtors__img {
     width: 7rem;
     border-radius: 50%;
     display: block; }
+  .realtors__sold {
+    text-transform: uppercase;
+    color: #aaa;
+    transform: translateY(-3px); }
 
 .features {
   grid-column: center-start / center-end;

@@ -19,6 +19,7 @@
     grid-row-gap: 5vh; // 5% of view port height => it will change when i change the height of
     // the page accordingly! for bigger screen, it would be helpful, because the height would
     // be different and the gap with vh changes accordingly!
+    align-items: center; // center all items in the list grid container vertically!
   }
 
   &__img {
@@ -28,5 +29,10 @@
   }
 
   &__sold {
+    text-transform: uppercase;
+    color: $color-grey-light-2;
+    // margin-top: -3px;
+    // OR
+    transform: translateY(-3px);
   }
 }
