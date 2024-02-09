@@ -32,8 +32,13 @@
     // we can combile it with before sudo-element and after sudo-element and at the end,
     // we will have three items in a grid container: before sudo-element, text, after sudo-element
     display: grid;
-    // grid-template-rows: repeat(1, 1fr);
-    // justify-self: center;
+    grid-template-rows: repeat(1, 1fr);
+    // grid-template-columns: 1fr min-content 1fr; // this is not a good option, because, it
+    // both 1fr take most of the spaces equally and minimum space stays for the Seen on text which
+    //  is not enough! that's why we have to use max-content
+    grid-template-columns: 1fr max-content 1fr;
+    // justify-content: center;
+    // align-items: center;
 
     font-size: 1.6rem;
     color: $color-grey-light-2;
