@@ -39,6 +39,13 @@
     // the page accordingly! for bigger screen, it would be helpful, because the height would
     // be different and the gap with vh changes accordingly!
     align-items: center; // center all items in the list grid container vertically!
+
+    // to make it responsive for desktop first layout => max-width:800px
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content); // we need three times for
+      // both image with min-content and also text with max-content!
+      // at the end, we will have six colums track instead of 2 column tracks at the beginning!
+    }
   }
 
   &__img {
