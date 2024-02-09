@@ -27,6 +27,35 @@
   }
 
   &__seenon-text {
+    // this is only a text and doesn't have any children, can i make a grid container if it?
+    // yes , only one text without children can be a grid container too!
+    // we can combile it with before sudo-element and after sudo-element and at the end,
+    // we will have three items in a grid container: before sudo-element, text, after sudo-element
+    display: grid;
+    // grid-template-rows: repeat(1, 1fr);
+    // justify-self: center;
+
+    font-size: 1.6rem;
+    color: $color-grey-light-2;
+
+    &::before,
+    &::after {
+      background-color: currentColor; // the color is the same like above color: $color-grey-light-2;
+      height: 1px;
+      // width: 4.5rem;
+      content: "";
+      display: block;
+    }
+
+    &::before {
+      // transform: translateX(-1rem);
+      // margin-top: 50%;
+    }
+
+    &::after {
+      // transform: translate(1rem);
+      // transform: translateX(1rem);
+    }
   }
 
   &__seenon-logos {
