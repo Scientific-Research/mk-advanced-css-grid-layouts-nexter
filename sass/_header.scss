@@ -11,7 +11,10 @@
   display: grid;
   grid-template-rows: 1fr min-content 6rem 1fr; // this is the 80% of view-port height!
   // without this 1fr, all the rows were equally divided and that's what we don't want!
-  grid-template-columns: max-content;
+  // grid-template-columns: max-content;
+  grid-template-columns: minmax(min-content, max-content); // to be responsive - the min value
+  // will never be less than min-content and max value would be max-content, when we change
+  // the width of the page!
   grid-row-gap: 1.5rem;
   justify-content: center; // to bring all the grid row items now in the middle of the header!
   // hajic => horizontal justify content
@@ -71,7 +74,9 @@
     justify-items: center;
 
     img {
-      height: 2.5rem;
+      // height: 2.5rem;
+      max-height: 2.5rem; // to be responsive, it can be less than this value! - a variable value
+      max-width: 100%; // to be responsive, it can be less than this value! - a variable value
       filter: brightness(70%); // to make these four logos: bbc, Forbes, ... a little bit darker!
       // default is 100% which is normal bright!
     }
