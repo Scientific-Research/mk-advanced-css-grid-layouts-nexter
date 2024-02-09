@@ -14,6 +14,10 @@ $color-grey-dark-2: #6d5d4b;
 $font-primary: "Nunito", sans-serif;
 $font-display: "Josefin Sans", sans-serif;
 
+// RESPONSIVE BREAKPOINTS:
+// we use media query with em instead of percent like what we have done already!
+$bp-largest: 75em; // 1200px / 16 (the default browser pixel) = 75em;
+
 *,
 *::before,
 *::after {
@@ -25,6 +29,12 @@ $font-display: "Josefin Sans", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px/16px = 62.5% => 1rem = 10px
+
+  // to make it responsive for desktop first layout => max-width:1200px
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; // 8px/16px = 50% => 1rem = 8px instead of 10px => so, we will see the
+    // font size smaller when we reach the px equal or smaller than 1200px!
+  }
 }
 
 body {
