@@ -6,7 +6,7 @@
   &__list {
     display: grid;
 
-    // grid-template-rows: repeat(3, 1fr); // we don't need it, it is already there!
+    grid-template-rows: repeat(3, max-content); // with max- or min-content, it would be flexible!
     // we just need to define the grid-template-columns
     // grid-template-columns: repeat(2, fr); // it is better to define it as flexible items
     // with min-content and max-content
@@ -15,6 +15,10 @@
     // and max-content for its text beside it, to take the max length of the longest text and #
     // in this case, the second word doesn't go to the next line!
     // column-gap: 1rem;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh; // 5% of view port height => it will change when i change the height of
+    // the page accordingly! for bigger screen, it would be helpful, because the height would
+    // be different and the gap with vh changes accordingly!
   }
 
   &__img {

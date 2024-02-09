@@ -147,7 +147,10 @@ body {
   grid-column: col-start 7 / full-end; }
   .realtors__list {
     display: grid;
-    grid-template-columns: min-content max-content; }
+    grid-template-rows: repeat(3, max-content);
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh; }
   .realtors__img {
     width: 7rem;
     border-radius: 50%;
