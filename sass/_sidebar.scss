@@ -7,6 +7,14 @@
   justify-content: center; // align all the items along the main axis=> hrizontal axis=>
   // hajic => horizontal justify content
   // vahi => vertical align items
+
+  // to make it responsive for desktop first layout => max-width:1000px
+  @media only screen and (max-width: $bp-large) {
+    // the sidebar is not valid anymore as defined already at the top at this width
+    // and we have to define it in this way => it works for equal or less than 1000px:
+    grid-column: 1/-1; // the entire columns
+    grid-row: 1/2; // only betwenn first and second rows!
+  }
 }
 
 .nav-btn {

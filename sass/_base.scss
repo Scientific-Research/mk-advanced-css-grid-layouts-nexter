@@ -17,6 +17,7 @@ $font-display: "Josefin Sans", sans-serif;
 // RESPONSIVE BREAKPOINTS:
 // we use media query with em instead of percent like what we have done already!
 $bp-largest: 75em; // 1200px / 16 (the default browser pixel) = 75em;
+$bp-large: 62.5em; // 1000px / 16 (the default browser pixel) = 62.5em;
 
 *,
 *::before,
@@ -79,4 +80,18 @@ body {
   //   padding: 40px;
   //   font-size: 3rem;
   // }
+
+  // to make it responsive for desktop first layout => max-width:1000px
+  @media only screen and (max-width: $bp-large) {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    // we add this 6rem => 6rem*8px(and not 10px anymore)= 48px at this responsive mode!
+    grid-template-columns:
+    // we remove at this width the sidebar from left side of the page and added a new row
+    // with 6rem => 48px at the top!
+      // [sidebar-start] 8rem [sidebar-end full-start]
+
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+      [center-end]
+      minmax(6rem, 1fr) [full-end];
+  }
 }
