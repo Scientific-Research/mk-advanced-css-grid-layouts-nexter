@@ -21,6 +21,12 @@
   justify-content: center; // to bring all the grid row items now in the middle of the header!
   // hajic => horizontal justify content
 
+  // to make it responsive for desktop first layout => max-width:800px
+  @media only screen and (max-width: $bp-medium) {
+    // we only have to change the grid-column which is now: grid-column: full-start / col-end 6;
+    grid-column: 1/-1; // or full-start / full-end
+  }
+
   &__logo {
     height: 3rem;
     justify-self: center; // only nexter logo will be placed in center!

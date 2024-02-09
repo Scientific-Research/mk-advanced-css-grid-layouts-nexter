@@ -18,6 +18,7 @@ $font-display: "Josefin Sans", sans-serif;
 // we use media query with em instead of percent like what we have done already!
 $bp-largest: 75em; // 1200px / 16 (the default browser pixel) = 75em;
 $bp-large: 62.5em; // 1000px / 16 (the default browser pixel) = 62.5em;
+$bp-medium: 50em; // 800px / 16 (the default browser pixel) = 50em;
 
 *,
 *::before,
@@ -93,5 +94,18 @@ body {
       [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
       [center-end]
       minmax(6rem, 1fr) [full-end];
+  }
+
+  // to make it responsive for desktop first layout => max-width:800px
+  @media only screen and (max-width: $bp-medium) {
+    // here we don't need the column, i removed it. we need only an extra row!
+    // for the realtors to come down from right side when we are in equal or less than 800px!
+    // we have to add an extra min-content => we have now two min-content!
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content 40vw repeat(3, min-content);
+    // we want that header to occupy all the page, when realtor section disappears!
+    // that's why we use 100vh instead of 80vh!
+    // calc(100vh - 6rem) will subtract 6rem from headers which is 100vh and we will have from
+    // beginning the real header which is 100vh - 6rem and when we scroll to down, we
+    // go directly to features section.
   }
 }

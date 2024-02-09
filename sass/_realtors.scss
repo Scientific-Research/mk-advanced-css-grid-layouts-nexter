@@ -14,6 +14,12 @@
   grid-row-gap: 2rem;
   justify-items: center; // to put this sentence in the middle of our grid!
 
+  // to make it responsive for desktop first layout => max-width:800px
+  @media only screen and (max-width: $bp-medium) {
+    // we only have to change the grid-column which is now: grid-column: col-start 7 / full-end;
+    grid-column: 1/-1; // or full-start / full-end
+  }
+
   &__list {
     // margin-top: 1rem;
     display: grid;
